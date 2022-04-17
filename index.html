@@ -182,6 +182,44 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/2022/04/17/clean-DS/" target="_self">
+          macOS使用GitHub时忽略同步.DS_store
+        </a>
+      </h1>
+
+      <p class="index-excerpt">
+        <a href="/2022/04/17/clean-DS/" target="_self">
+          
+          
+            
+          
+          最近在macOS上使用GitHub的时候发现总是会同步一些名为.DS_Store的文件，这些是macOS用于记录文件夹的一些自定义属性的文件。出于强迫症，研究了一下怎么才能在GitHub上不同步这些文件。
+首先，在Repository的目录下删除所有.DS_Store：
+1find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-un
+        </a>
+      </p>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-04-17 16:16" pubdate>
+              2022-04-17
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/2021/10/21/hello-world/" target="_self">
           Hello World
         </a>
