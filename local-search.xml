@@ -11,12 +11,12 @@
     <content type="html"><![CDATA[<p>最近在macOS上使用GitHub的时候发现总是会同步一些名为.DS_Store的文件，这些是macOS用于记录文件夹的一些自定义属性的文件。出于强迫症，研究了一下怎么才能在GitHub上不同步这些文件。</p><p>首先，在Repository的目录下删除所有.DS_Store：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch<br></code></pre></td></tr></table></figure><p>之后在.gitignore设置不同步.DS_Store文件：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> .DS_Store &gt;&gt; ./.gitignore<br></code></pre></td></tr></table></figure>]]></content>
     
     
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
     
-    <tags>
-      
-      <tag>技术</tag>
-      
-    </tags>
     
   </entry>
   
