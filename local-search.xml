@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>解决Windows不能登录提示“你的PIN不再可用”</title>
+    <link href="/2024/09/16/clean-PIN/"/>
+    <url>/2024/09/16/clean-PIN/</url>
+    
+    <content type="html"><![CDATA[<p>没什么好说的，综合原因就是1、阿三程序员是真的初生；2、国内的网络和微软服务器配合的不是很好。</p><p>解决方法如下：</p><p>首先进入高级启动模式，按住shift点击“电源”-&gt;“重启”。如果不行就直接重启，在出现windows图标或主板图标时按关机键强行关机，反复三次后可以进入高级启动模式。选择“疑难解答”-&gt;“高级选项”-&gt;“命令提示符”输入如下指令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">move C:\Windows\System32\Utilman.exe C:\<br></code></pre></td></tr></table></figure><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">copy C:\Windows\System32\cmd.exe C:\Windows\System32\Utilman.exe<br></code></pre></td></tr></table></figure><p>之后重启电脑，在登陆界面点击轻松使用就能调出命令提示符。输入regedit，在打开的注册表编辑器中修改：</p><p>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WIndows NT\CurrentVersion\PasswordLess\Device]</p><p>将”DevicePasswordLessBuildVersion”的值从2改为0。</p><p>之后关闭注册表编辑器，在命令提示符中输入netplwiz，取消“要使用本计算机，用户必须输入用户名和密码”的勾。点击应用，随便设置一个密码。重启电脑，使用新的密码登陆。</p><p>最后微软阿三程序员的豹豹猫猫都亖了。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>macOS使用GitHub时忽略同步.DS_store</title>
     <link href="/2022/04/17/clean-DS/"/>
     <url>/2022/04/17/clean-DS/</url>
