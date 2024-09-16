@@ -24,7 +24,7 @@
 <meta property="og:description" content="没什么好说的，综合原因就是1、阿三程序员是真的初生；2、国内的网络和微软服务器配合的不是很好。 解决方法如下： 首先进入高级启动模式，按住shift点击“电源”-&gt;“重启”。如果不行就直接重启，在出现windows图标或主板图标时按关机键强行关机，反复三次后可以进入高级启动模式。选择“疑难解答”-&gt;“高级选项”-&gt;“命令提示符”输入如下指令： 1move C:\Windows\S">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-16T15:55:30.658Z">
-<meta property="article:modified_time" content="2024-09-16T16:08:39.715Z">
+<meta property="article:modified_time" content="2024-09-16T16:09:49.098Z">
 <meta property="article:author" content="IbsenCC">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -234,7 +234,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">copy C:\Windows\System32\cmd.exe C:\Windows\System32\Utilman.exe<br></code></pre></td></tr></table></figure>
 
 <p>之后重启电脑，在登陆界面点击轻松使用就能调出命令提示符。输入regedit，在打开的注册表编辑器中修改：</p>
-<p>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WIndows NT\CurrentVersion\PasswordLess\Device]</p>
+<p>[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device]</p>
 <p>将”DevicePasswordLessBuildVersion”的值从2改为0。</p>
 <p>之后关闭注册表编辑器，在命令提示符中输入netplwiz，取消“要使用本计算机，用户必须输入用户名和密码”的勾。点击应用，随便设置一个密码。重启电脑，使用新的密码登陆。</p>
 <p>最后微软阿三程序员的豹豹猫猫都亖了。</p>
